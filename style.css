@@ -3,3 +3,6 @@ body { margin: 0; font-family: Arial, sans-serif; background: #f3f4f6; color: #2
 .status-panel { max-width: 620px; margin: 60px auto; padding: 28px; background: white; border-radius: 16px; }
 button { padding: 12px 18px; margin-right: 8px; cursor: pointer; }
 .status-panel.completed { background: #e9f7ec; }
+.status-panel.completed {
+    background-color: rgb(149, 229, 169);
+}
