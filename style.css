@@ -1,5 +1,97 @@
-* { box-sizing: border-box; }
-body { margin: 0; font-family: Arial, sans-serif; background: #f3f4f6; color: #222; }
-.status-panel { max-width: 620px; margin: 60px auto; padding: 28px; background: white; border-radius: 16px; }
-button { padding: 12px 18px; margin-right: 8px; cursor: pointer; }
-.status-panel.completed { background: #e9f7ec; }
+/* 2. Для всех элементов включите box-sizing: border-box */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* 3, 4. Ограничение ширины, центрирование, отступы, рамка, скругление + Самостоятельная часть: тень и hover карточки */
+.profile-card {
+    max-width: 520px;
+    width: 100%; /* Гарантирует адаптивность на экранах 320px */
+    margin: 40px auto;
+    padding: 24px;
+    border: 1px solid #d9d9d9;
+    border-radius: 18px;
+    background-color: #ffffff;
+    /* Самостоятельная часть: лёгкая тень */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    /* Плавный переход для hover-эффекта карточки */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Самостоятельная часть: собственное оформление :hover для карточки */
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* 5. Оформление заголовка и текста */
+.profile-card__title {
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: #2c3e50;
+}
+
+.profile-card__text {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* 6. Убираем лишние внешние отступы у списка навыков */
+.profile-card__skills {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 24px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.profile-card__skills li {
+    background-color: #eef2f5;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #444;
+}
+
+/* Самостоятельная часть: выделение одного навыка через отдельный класс */
+.skill-highlight {
+    background-color: #3498db;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* 7. Оформление ссылки-кнопки */
+.profile-card__link {
+    display: inline-block;
+    background-color: #2c3e50;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* 8. Состояния :hover и :active для ссылки-кнопки */
+.profile-card__link:hover {
+    background-color: #34495e;
+    text-decoration: none;
+}
+
+.profile-card__link:active {
+    transform: translateY(2px); /* Эффект нажатия */
+    background-color: #1a252f;
+}

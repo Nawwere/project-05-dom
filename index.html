@@ -3,16 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM и события</title>
+    <title>ПЗ-3: Базовые CSS-свойства</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main class="status-panel">
-        <h1>Статус практической работы</h1>
-        <p class="status-text">Работа ещё не отмечена как выполненная.</p>
-        <button class="status-button" type="button">Выполнено</button>
-        <button class="reset-button" type="button">Сбросить</button>
-    </main>
-    <script src="script.js"></script>
+
+    <!-- Первая карточка -->
+    <article class="profile-card">
+        <h2 class="profile-card__title">Иван Иванов</h2>
+        <p class="profile-card__text">Начинающий frontend-разработчик. Увлекаюсь созданием удобных и красивых веб-интерфейсов. Быстро учусь и люблю решать сложные задачи.</p>
+        
+        <ul class="profile-card__skills">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li class="skill-highlight">JavaScript</li> <!-- Выделенный навык -->
+            <li>Git</li>
+        </ul>
+
+        <a href="#" class="profile-card__link">Связаться со мной</a>
+    </article>
+
+    <!-- Вторая карточка (Самостоятельная часть) -->
+    <article class="profile-card">
+        <h2 class="profile-card__title">Анна Петрова</h2>
+        <p class="profile-card__text">UI/UX дизайнер с опытом работы более 2 лет. Создаю интуитивно понятные дизайн-системы и прототипы мобильных приложений.</p>
+        
+        <ul class="profile-card__skills">
+            <li>Figma</li>
+            <li class="skill-highlight">Adobe Illustrator</li> <!-- Выделенный навык -->
+            <li>Прототипирование</li>
+            <li>Типографика</li>
+        </ul>
+
+        <a href="#" class="profile-card__link">Посмотреть портфолио</a>
+    </article>
+
 </body>
 </html>
